@@ -23,8 +23,8 @@ if (maxNumber < numberSecond)
   maxNumber = numberSecond;
 }
 if (maxNumber < numberThird)
-  {
-    maxNumber = numberThird;
-  }
+{
+  maxNumber = numberThird;
+}
 
 System.Console.WriteLine($"Максимальным числом из {numberFirst}, {numberSecond} и {numberThird} является {maxNumber}");
