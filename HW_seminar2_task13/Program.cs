@@ -18,18 +18,23 @@ bool Validate(int number)
   System.Console.WriteLine("Введенное вами число не имеет третьей цифры.");
   return false;
 }
+int thirdDigit = 0;
+int GetThirdDigitOfNumber(int anyNumber)
+{
+  while (anyNumber > 100)
+  { 
+    thirdDigit = anyNumber % 10;
+    anyNumber = anyNumber / 10;
+  }
+  return thirdDigit;
+}
 
 int numberInput = Prompt("Введите число");
 int numberOutput = numberInput;
-int thirdDigit = 0;
+
 if (Validate(numberInput))
 {
-  while (numberInput > 100)
-  {
-    thirdDigit = numberInput % 10;
-    numberInput = numberInput / 10;
-  }
-  System.Console.WriteLine($"Третья цифра числа {numberOutput} равна {thirdDigit}.");
+  System.Console.WriteLine($"Третья цифра числа {numberOutput} равна {GetThirdDigitOfNumber(numberInput)}.");
 }
 
 
