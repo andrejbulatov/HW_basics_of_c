@@ -19,12 +19,21 @@ bool Validate(int number)
   return false;
 }
 
+bool weekEndDays(int weekEndDayNumber)
+{
+  if(weekEndDayNumber == 6 || weekEndDayNumber == 7)
+  {
+    return true;
+  }
+  return false;
+}
+
 int numberInput = Prompt("Введите номер дня недели");
 string[] array = { "понедельник", "вторник", "среда", "четверг", "пятница", "суббота", "воскресенье" };
 
 if (Validate(numberInput))
 {
-  if(numberInput == 6 || numberInput == 7)
+  if(weekEndDays(numberInput))
   {
     System.Console.WriteLine($"Вы ввели номер дня недели {numberInput} - это {array[numberInput - 1]}, что соответствует выходному дню.");
   }
