@@ -44,10 +44,10 @@ void PrintArray(int[,] array)
 
 bool Validate(int[,] array, int positionRowElement, int positionColElement)
 {
-  if (positionRowElement - 1 >= 0
-     && positionRowElement - 1 < array.GetLength(0)
-     && positionColElement - 1 >= 0
-     && positionColElement - 1 < array.GetLength(1))
+  if (positionRowElement >= 1
+     && positionRowElement <= array.GetLength(0)
+     && positionColElement >= 1
+     && positionColElement <= array.GetLength(1))
   {
     return true;
   }
