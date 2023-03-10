@@ -17,12 +17,13 @@ void ShowEvenNumbers(int numFirst, int numSecond)
     return;
   }
   
-  if (numFirst % 2 == 0) System.Console.WriteLine($"{numFirst}");
-  ShowEvenNumbers(numFirst + 1, numSecond);
+  System.Console.WriteLine($"{numFirst}");
+  ShowEvenNumbers(numFirst + 2, numSecond);
   
 }
 
 
 int numberFirst = InputNumber("Введите первое число ");
+if (numberFirst % 2 != 0) numberFirst = numberFirst + 1;
 int numberSecond = InputNumber("Введите второе число ");
 ShowEvenNumbers(numberFirst, numberSecond);
